@@ -1,0 +1,37 @@
+<table>
+    <thead class="navigation">
+        <tr>
+            <th (click)="navigateBackward()">&lt;</th>
+            <th (click)="navigationTitleClicked()" [attr.colspan]="isMonthSelectionVisible ? 2 : 6">{{navigationTitle}}</th>
+            <th (click)="navigateForward()">&gt;</th>
+        </tr>
+    </thead>
+
+    <tbody *ngIf="isMonthSelectionVisible" class="month-selection">
+        <tr *ngFor="let row of monthsRow">
+            <td *ngFor="let month of row" (click)="onMonthClicked(month)"
+                [class.is-selected]="isMonthSelected(month)">
+                 {{month.format('MMM')}}
+            </td>
+        </tr>
+    </tbody>
+
+    <tbody *ngIf="isDateSelectionVisible" class="date-selection">
+        <tr>
+            <td></td>
+            <td>Mo</td>
+            <td>Di</td>
+            <td>Mi</td>
+            <td>Do</td>
+            <td>Fr</td>
+            <td>Sa</td>
+            <td>So</td>
+        </tr>
+        <tr *ngFor="let week of weeks">
+            <td class="calendar-week">{{week.value}}</td>
+            <td *ngFor="let date of week.dates" (click)="onDateClicked(date)" [class.is-selected]="isDateSelected(date)">
+                 {{date.format('D')}}
+            </td>
+        </tr>
+    </tbody>
+</table>

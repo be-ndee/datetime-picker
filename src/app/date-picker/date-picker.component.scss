@@ -1,0 +1,22 @@
+td, th {
+    padding: 5px;
+    text-align: center;
+}
+
+.navigation {
+}
+
+.month-selection {
+
+}
+
+.date-selection {
+    .calendar-week {
+        text-align: right;
+        color: #dadada;
+    }
+}
+
+.is-selected {
+    color: red;
+}

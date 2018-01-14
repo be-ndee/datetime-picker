@@ -1,0 +1,14 @@
+<date-picker #datePicker1 [(date)]="date1"></date-picker>
+<date-picker #datePicker2 [(date)]="date2"></date-picker>
+
+<br>
+<button (click)="datePicker1.reset()">Reset 1</button>
+<button (click)="datePicker1.save()">Save 1</button>
+<br>
+date1: {{date1 ? date1.toString() : 'null'}}
+
+<br>
+<button (click)="datePicker2.reset()">Reset 2</button>
+<button (click)="datePicker2.save()">Save 2</button>
+<br>
+date2: {{date2 ? date2.toString() : 'null'}}
