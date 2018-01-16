@@ -75,7 +75,7 @@ export class DatePickerComponent implements OnInit {
     }
 
     private createMonths(): void {
-        const createMonth = (value: number): moment.Moment {
+        const createMonth = (value: number): moment.Moment => {
             return moment().year(this.navigationDate.year()).month(value);
         };
         this.monthsRow = [
