@@ -179,7 +179,7 @@ export class DatePickerComponent implements OnInit {
                 this._date = new Date();
             }
 
-            this.date.setYear(this.selectedDate.year());
+            this.date.setFullYear(this.selectedDate.year());
             this.date.setMonth(this.selectedDate.month());
             this.date.setDate(this.selectedDate.date());
         }
